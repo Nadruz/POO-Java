@@ -4,5 +4,15 @@ public class ComputadorPedro {
 
         msn.enviarMensagem();
         msn.receberMensagem();
+    
+        FacebookMenssager fcb = new FacebookMenssager();
+
+        fcb.enviarMensagem();
+        fcb.receberMensagem();
+    
+        Telegram tlg = new Telegram();
+
+        tlg.enviarMensagem();
+        tlg.receberMensagem();
     }
 }

@@ -1,11 +1,11 @@
-public class MSNMenssager {
+public class Telegram {
     public void enviarMensagem() {
         validarConectadoInternet();
-        System.out.println("Enviando mensagem pelo MSN Mensseger");
+        System.out.println("Enviando mensagem pelo Telegram");
         salvarHistoricoMensagem();
     }
     public void receberMensagem() {
-        System.out.println("Recebendo mensagem pelo MSN Mensseger");
+        System.out.println("Recebendo mensagem pelo Telegram");
     }
     private void validarConectadoInternet() {
         System.out.println("Validando se está com internet");
@@ -14,3 +14,4 @@ public class MSNMenssager {
         System.out.println("Salvando o histórico da mensagem");
     }
 }
+
