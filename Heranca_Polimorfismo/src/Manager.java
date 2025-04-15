@@ -1,9 +1,18 @@
 package POO_Java.Heranca_Polimorfismo.src;
 
 public final class Manager extends Employee{
+    public Manager(String code, String name, String adress, int age, double salary) {
+        super(code, name, adress, age, salary);
+    }
+
+    public Manager() {
+        
+    }
+
     private String login;
     private String password;
     private double commission;
+
 
     public String getLogin() {
         return login;
