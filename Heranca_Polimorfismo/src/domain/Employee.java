@@ -1,13 +1,21 @@
 package POO_Java.Heranca_Polimorfismo.src;
 
-public sealed abstract class Employee permits Manager, Salesman, Develop { // nas que podem ter acesso precisamos colocar "final"
-    private String name;
-    private String adress;
-    private String code;
-    private int age;
-    private double salary;
+public sealed abstract class Employee permits Manager, Salesman { // nas que podem ter acesso precisamos colocar "final"
+    protected String name;
 
-    public Employee(String code, String name, String adress, int age, double salary) {
+    protected String adress; 
+    
+    protected String code;
+
+    protected int age;
+
+    protected double salary;
+
+    public Employee(String code, 
+                    String name, 
+                    String adress, 
+                    int age, 
+                    double salary) {
         this.code = code;
         this.name = name;
         this.adress = adress;
@@ -52,7 +60,10 @@ public sealed abstract class Employee permits Manager, Salesman, Develop { // na
     }
     public void setSalary(double salary) {
         this.salary = salary;
-    } 
-
+    }
+    @Override
+    public double getFullSalary() {
+        return this.salary + (soldAmount + percentPerSold) /100;
+    }
 
 }
